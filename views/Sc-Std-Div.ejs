@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Std And Div</title>
+</head>
+<body>
+    <table border="" style="text-align: center;">
+        <tr>
+            <th>Student Name</th>
+            <th>Standard</th>
+            <th>Div</th>
+            <th>Roll No</th>
+        </tr>
+        <% result.forEach(function(data){ %>
+            <tr>
+                <td><%= data.name %></td>
+                <td><%= data.stnd %></td>
+                <td><%= data.sdiv %></td>
+                <td><%= data.sroll %></td>
+            </tr>
+        <% }); %>
+    </table>
+</body>
+</html>

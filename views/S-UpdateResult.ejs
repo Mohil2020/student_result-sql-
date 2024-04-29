@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Result</title>
+</head>
+
+<body>
+    <h2>Update Result</h2>
+    <form method="post">
+        <table>
+            <% result.forEach(function(data) { %>
+            <tr>
+                <td>Enter Name</td>
+                <td><input type="text" name="sname" value="<%= data.name %>"></td>
+            </tr>
+            <tr>
+                <td>Enter Standard</td>
+                <td>
+                    <select name="stnd">
+                        <% result.forEach(function(data) { %>
+                            <option value="<%= data.stnd %>"><%= data.stnd %></option>
+                        <% }); %>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Enter Division</td>
+                <td>
+                    <select name="sdiv">
+                        <% result.forEach(function(data) { %>
+                            <option value="<%= data.sdiv %>"><%= data.sdiv %></option>
+                        <% }); %>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Enter Roll</td>
+                <td>
+                    <input type="text" name="sroll" value="<%= data.roll %>">
+                </td>
+            </tr>
+            <tr>
+                <td>Enter Sub1 Marks</td>
+                <td><input type="text" name="sub1" value="<%= data.s1 %>"></td>
+            </tr>
+            <tr>
+                <td>Enter Sub2 Marks</td>
+                <td><input type="text" name="sub2" value="<%= data.s2 %>"></td>
+            </tr>
+            <tr>
+                <td>Enter Sub3 Marks</td>
+                <td><input type="text" name="sub3" value="<%= data.s3 %>"></td>
+            </tr>
+            <tr>
+                <td>Enter Sub4 Marks</td>
+                <td><input type="text" name="sub4" value="<%= data.s4 %>"></td>
+            </tr>
+            <tr>
+                <td>Enter Sub5 Marks</td>
+                <td><input type="text" name="sub5" value="<%= data.s5 %>"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Submit"></td>
+            </tr>
+            <% }); %>
+        </table>
+    </form>
+</body>
+
+</html>

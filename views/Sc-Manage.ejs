@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Manage</title>
+</head>
+<body>
+    <h2>Manage Staff</h2>
+    <table border="" style="text-align: center;">
+        <tr>
+            <th>Staff Id</th>
+            <th>Staff Name</th>
+            <th>Staff Email</th>
+            <th>Staff Standard</th>
+            <th>Staff Division</th>
+            <th>Delete</th>
+            <th>Update</th>
+        </tr>
+        <% result.forEach(function(data){ %>
+            <tr>
+                <td>
+                    <%= data.id%>
+                </td>
+                <td>
+                    <%= data.name%>
+                </td>
+                <td>
+                    <%= data.email%>
+                </td>
+                <td>
+                    <%= data.stnd%>
+                </td>
+                <td>
+                    <%= data.sdiv%>
+                </td>
+                <td><a href="/DeleteStaff/<%= data.id%>">Delete</a></td>
+                <td><a href="/UpdateStaff/<%= data.id%>">Update</a></td>
+            </tr>
+            <% }); %>
+    </table>
+</body>
+</html>

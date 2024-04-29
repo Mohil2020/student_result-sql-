@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Result</title>
+</head>
+<body>
+    <h2>View Result</h2>
+    <table border="" style="text-align: center">
+        <tr>
+            <th>Name</th>
+            <th>Roll No</th>
+            <th>Standard</th>
+            <th>Division</th>
+            <th>Subject 1</th>
+            <th>Subject 2</th>
+            <th>Subject 3</th>
+            <th>Subject 4</th>
+            <th>Subject 5</th>
+            <th>Total</th>
+            <th>Percentage</th>
+            <th>Max</th>
+            <th>Min</th>
+            <th>Result</th>
+            <th>Grade</th>
+        </tr>
+        <% result.forEach(function(result){%>
+        <tr>
+            <td><%=result.name%></td>
+            <td><%=result.roll%></td>
+            <td><%=result.stnd%></td>
+            <td><%=result.sdiv%></td>
+            <td><%=result.s1%></td>
+            <td><%=result.s2%></td>
+            <td><%=result.s3%></td>
+            <td><%=result.s4%></td>
+            <td><%=result.s5%></td>
+            <td><%=result.total%></td>
+            <td><%=result.per%></td>
+            <td><%=result.max%></td>
+            <td><%=result.min%></td>
+            <td><%=result.res%></td>
+            <td><%=result.grade%></td>
+        </tr>
+        <%})%>
+    </table>
+</body>
+</html>

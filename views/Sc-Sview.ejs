@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff View</title>
+</head>
+<body>
+    <table border="1" align="center" style="text-align: center;">
+        <tr>
+            <th>Staff Id</th>
+            <th>Staff Name</th>
+            <th>Staff Email</th>
+            <th>Staff Standad</th>
+            <th>Staff Division</th>
+        </tr>
+        <% result.forEach(function(data){ %>
+            <tr>
+                <td><%= data.id %></td>
+                <td><%= data.name %></td>
+                <td><%= data.email %></td>
+                <td><%= data.stnd %></td>
+                <td><%= data.sdiv %></td>
+            </tr>
+        <% }); %>
+    </table>
+</body>
+</html>

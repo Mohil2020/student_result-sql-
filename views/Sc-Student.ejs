@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student</title>
+</head>
+<body>
+    <form method="post">
+        <table>
+            <tr>
+                <td>Student Full Name</td>
+                <td><input type="text" name="sname"></td>
+            </tr>
+            <tr>
+                <td>Enter Standard</td>
+                <td>
+                   <select name="sstd">
+                    <% result.forEach(function(data){ %>
+                        <option value="<%= data.stnd %>"><%= data.stnd %></option>
+                        <% }); %>
+                   </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Enter Division</td>
+                <td>
+                   <select name="sdiv">
+                    <% result1.forEach(function(data){ %>
+                        <option value="<%= data.sdiv %>"><%= data.sdiv %></option>
+                        <% }); %>
+                   </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Student Roll No:</td>
+                <td><input type="text" name="sroll"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

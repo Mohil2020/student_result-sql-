@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Staff</title>
+</head>
+<body>
+    <form method="post">
+        <table>
+            <tr>
+                <td>Enter Staff Name</td>
+                <td><input type="text" name="sname"></td>
+            </tr>
+            <tr>
+                <td>Enter Staff Email</td>
+                <td><input type="email" name="semail"></td>
+            </tr>
+            <tr>
+                <td>Enter Staff Password</td>
+                <td><input type="password" name="spass"></td>
+            </tr>
+            <tr>
+                <td>Select Standard</td>
+                <td>
+                    <select name="sstd">
+                        <% result.forEach(function(data){ %>
+                            <option value="<%= data.stnd %>"><%= data.stnd %></option>
+                            <% }); %>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Select Division</td>
+                <td>
+                    <select name="sdiv">
+                        <% result1.forEach(function(data){ %>
+                            <option value="<%= data.sdiv %>"><%= data.sdiv %></option>
+                            <% }); %>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

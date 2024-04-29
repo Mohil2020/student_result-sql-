@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login</title>
+</head>
+<body>
+    <h2>Student Login</h2>
+    <form method="post">
+        <table>
+            <tr>
+                <td>Select Standard</td>
+                <td>
+                    <select name="stnd">
+                        <%result.forEach(function(data){%>
+                            <option value="<%=data.stnd%>"><%=data.stnd%></option>
+                        <%})%>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Select Division</td>
+                <td>
+                    <select name="sdiv">
+                        <%result.forEach(function(data){%>
+                            <option value="<%=data.sdiv%>"><%=data.sdiv%></option>
+                        <%})%>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Enter Roll No</td>
+                <td><input type="text" name="roll"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Login"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
